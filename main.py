@@ -26,8 +26,8 @@ while game_is_on:
     screen.update() 
     ball.move() 
     
-    # Add a small delay to prevent the loop from running too fast
-    # You can adjust this or remove it based on your needs
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
     
 
 screen.exitonclick()
